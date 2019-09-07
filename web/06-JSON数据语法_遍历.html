@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //基本格式
+        var person = {"name": "张三", age: 23, 'gender': true};
+        //3.嵌套格式 [] -> {}
+        var ps = [{"name": "张三", age: 23, 'gender': true},
+            {"name": "张三", age: 23, 'gender': true},
+            {"name": "张三", age: 23, 'gender': true}
+            ];
+
+        //遍历person中所有的键和值
+        /*for(var key in person){
+            //这样的方式获取不行，因为相当于 person."name"
+            //alter(key+":"+person.key);
+            alert(key+":"+person[key]);
+        }*/
+
+        //获取ps中的所有值
+        for(var i = 0 ; i < ps.length ; i ++){
+            var p = ps[i];
+            for(var key in p){
+                alert(key+":"+p[key]);
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
